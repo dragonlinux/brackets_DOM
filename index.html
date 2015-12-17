@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+        <title>ok</title>
+        <link rel="stylesheet" href="test.css">
+    </head>
+
+    <body>
+        <!--dragon-->
+        <p>文档</p>
+        <div id="container">这是一个元素</div>
+        <script>
+            var divNode = document.getElementById("container");
+            //            if (divNode.nodeType == 1) {
+            //                alert("元素节点");
+            //            }
+            console.log(divNode.nodeName + "/" + divNode.nodeValue);
+            var attrNode = divNode.attributes[0];
+            console.log(attrNode.nodeName + "/" + attrNode.nodeValue);
+            var textNode = divNode.childNodes[0];
+            console.log(textNode.nodeName + "/" + textNode.nodeValue);
+            var commentNode = document.body.childNodes[1];
+            console.log(commentNode.nodeName + "/" + commentNode.nodeValue);
+
+            console.log(document.doctype.nodeName + "/" + document.doctype.nodeValue);
+            
+            var frag = document.createDocumentFragment();
+            console.log(frag.nodeName + "/" + frag.nodeValue);
+
+        </script>
+    </body>
+
+</html>
